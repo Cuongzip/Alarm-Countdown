@@ -1,0 +1,254 @@
+
+@import url('../fonts/Playwrite_DK_Uloopet/PlaywriteDKUloopet-VariableFont_wght.ttf');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 26px;
+}
+html {
+    font-family: "Playwrite DK Uloopet", cursive;
+    font-size: 62.5%;
+   
+}
+body{
+    font-size: 1.6rem;
+    color: white;
+}
+ul{
+    list-style: none;
+}
+.wrapper{
+    background-color: #1c2743;
+    height: 100vh;
+
+
+}
+
+.inner{
+    width: 90%;
+    margin: 0 auto;
+}
+.count-down {
+    position: relative;
+}
+.count-down{
+  
+    text-align: center;
+
+}
+.count-down time{
+    font-size: 19vw;
+    font-weight: 800;
+    line-height: 250px;
+}
+
+.count-down-buttons{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.count-down-button{
+    display: none;
+    background-color: #fd9564;
+    padding: 5px 20px;
+    border-radius: 15px;
+    color: white;
+    border: 1px solid white;
+    margin: 10px;
+
+}
+.button-add{
+    background-color: white;
+    color: black;
+    font-size: 3rem;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fd9564;
+}
+.history{
+    padding: 30px;
+}
+.alarm{
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+.button-slide{
+    position: relative;
+    border-radius: 15px;
+    width: 70px;
+    height: 25px;
+    background-color: white;
+    overflow: hidden;
+}
+.button-slide-circle{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e3463f ;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+
+}
+
+.button-slide-bg{
+    width: 100%;
+    height: 100%;
+    margin-left: -100%;
+    transition: all 0.2s ease-in;
+    background-color: #fd9564;
+}
+
+.button-slide-active .button-slide-circle {
+    left: 100%;
+    transform: translate(-100%, -50%);
+}
+.button-slide-active .button-slide-bg {
+   margin-left:0;
+}
+.alarm ~ .alarm{
+    margin-top: 30px;
+}
+/* modal */
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0,0,0.2);
+    z-index: 10;
+}
+.modal-inner{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+.modal-inner-time{
+    display: flex;
+    align-items: center;
+    font-size: 19vw;
+    color: black;
+}
+.modal-inner-time-group{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-inner-time-group input{
+    border: none;
+    width: 2.2ch;
+    font-weight: 800;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.modal-inner-time-group-menu{
+    font-size: 1.6rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 6px rgba(0, 0,0,0.5);
+    min-width: 200px;
+    padding: 10px 0;
+    height: 204px;
+    overflow: scroll;
+    display: none;
+    z-index: 10;
+}
+
+.modal-inner-time-group-menu li{
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+.modal-inner-time-group-menu li:hover, .modal-inner-time-group-menu-item-active{
+    background-color: rgba(0, 0,0,0.2);
+}
+.modal-inner-time-group input:focus{
+    outline: none;
+}
+.modal-inner-time-group input::selection{
+    background-color: #fff0b3;
+}
+.modal-inner-time-group input:focus + .modal-inner-time-group-menu{
+    display: block;
+}
+.modal-inner-time-group label{
+    font-size: 1.7rem;
+}
+.modal-inner-btn-set{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fd9564;
+    border: 1px solid #e3463f;
+    color: white;
+    font-size: 2rem;
+    padding: 8px 30px;
+    border-radius: 20px;
+}
+.show{
+    display: block;
+}
+.time-now{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.list-audios{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.bell{
+    display: block;
+    color: #fd9564;
+    font-size: 10rem;
+    padding: 50px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+@keyframes shaking {
+   0%{
+    transform: rotate(0deg);
+   }
+   20%{
+    transform: rotate(30deg);
+   }
+   80%{
+    transform: rotate(-30deg);
+   }
+   100%{
+    transform: rotate(0deg);
+   }
+}
+
+.animation-shaking{
+    animation: shaking 0.5s  ease-in infinite;
+}

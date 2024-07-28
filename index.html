@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm</title>
+    <link rel="icon" type="image/x-icon" href="./logos/clock-circle.png" />
+    <!-- reset default css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- icon -->
+    <link
+      href="./icons/fontawesome-free-6.5.2-web/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="inner">
+        <i class="bell fa-solid fa-bell"></i>
+
+        <div class="count-down">
+          <time>00:00:00</time>
+          <div class="count-down-buttons">
+            <button class="count-down-start count-down-button show">
+              Start
+            </button>
+            <button class="count-down-stop count-down-button">Stop</button>
+            <button class="count-down-reset count-down-button">Reset</button>
+            <button class="count-down-start-again count-down-button">
+              Start again
+            </button>
+          </div>
+        </div>
+        <div class="modal">
+          <div class="modal-inner">
+            <div class="modal-inner-time">
+              <div class="modal-inner-time-group">
+                <input id="hours" maxlength="2" max="60" />
+                <ul class="modal-inner-time-group-menu">
+                  <li value="01">1 giờ</li>
+                  <li value="02">2 giờ</li>
+                  <li value="03">3 giờ</li>
+                  <li value="04">4 giờ</li>
+                  <li value="05">5 giờ</li>
+                  <li value="06">6 giờ</li>
+                  <li value="07">7 giờ</li>
+                  <li value="08">8 giờ</li>
+                  <li value="09">9 giờ</li>
+                  <li value="10">10 giờ</li>
+                  <li value="11">11 giờ</li>
+                  <li value="12">12 giờ</li>
+                  <li value="13">13 giờ</li>
+                  <li value="14">14 giờ</li>
+                  <li value="15">15 giờ</li>
+                  <li value="16">16 giờ</li>
+                  <li value="17">17 giờ</li>
+                  <li value="18">18 giờ</li>
+                  <li value="20">20 giờ</li>
+                  <li value="21">21 giờ</li>
+                  <li value="22">22 giờ</li>
+                  <li value="23">23 giờ</li>
+                  <li value="24">24 giờ</li>
+                </ul>
+                <label for="hours">Giờ</label>
+              </div>
+              :
+              <div class="modal-inner-time-group">
+                <input id="minutes" maxlength="2" max="60" />
+                <ul class="modal-inner-time-group-menu">
+                  <li value="01">1 phút</li>
+                  <li value="02">2 phút</li>
+                  <li value="03">3 phút</li>
+                  <li value="04">4 phút</li>
+                  <li value="05">5 phút</li>
+                  <li value="06">6 phút</li>
+                  <li value="07">7 phút</li>
+                  <li value="08">8 phút</li>
+                  <li value="09">9 phút</li>
+                  <li value="10">10 phút</li>
+                  <li value="11">11 phút</li>
+                  <li value="12">12 phút</li>
+                  <li value="13">13 phút</li>
+                  <li value="14">14 phút</li>
+                  <li value="15">15 phút</li>
+                  <li value="16">16 phút</li>
+                  <li value="17">17 phút</li>
+                  <li value="18">18 phút</li>
+                  <li value="19">19 phút</li>
+                  <li value="20">20 phút</li>
+                  <li value="21">21 phút</li>
+                  <li value="22">22 phút</li>
+                  <li value="23">23 phút</li>
+                  <li value="24">24 phút</li>
+                  <li value="25">25 phút</li>
+                  <li value="26">26 phút</li>
+                  <li value="27">27 phút</li>
+                  <li value="28">28 phút</li>
+                  <li value="29">29 phút</li>
+                  <li value="30">30 phút</li>
+                  <li value="31">31 phút</li>
+                  <li value="32">32 phút</li>
+                  <li value="33">33 phút</li>
+                  <li value="34">34 phút</li>
+                  <li value="35">35 phút</li>
+                  <li value="36">36 phút</li>
+                  <li value="37">37 phút</li>
+                  <li value="38">38 phút</li>
+                  <li value="39">39 phút</li>
+                  <li value="40">40 phút</li>
+                  <li value="41">41 phút</li>
+                  <li value="42">42 phút</li>
+                  <li value="43">43 phút</li>
+                  <li value="44">44 phút</li>
+                  <li value="45">45 phút</li>
+                  <li value="46">46 phút</li>
+                  <li value="47">47 phút</li>
+                  <li value="48">48 phút</li>
+                  <li value="49">49 phút</li>
+                  <li value="50">50 phút</li>
+                  <li value="51">51 phút</li>
+                  <li value="52">52 phút</li>
+                  <li value="53">53 phút</li>
+                  <li value="54">54 phút</li>
+                  <li value="55">55 phút</li>
+                  <li value="56">56 phút</li>
+                  <li value="57">57 phút</li>
+                  <li value="58">58 phút</li>
+                  <li value="59">59 phút</li>
+                  <li value="60">60 phút</li>
+                </ul>
+                <label for="minutes">Phút</label>
+              </div>
+              :
+              <div class="modal-inner-time-group">
+                <input id="seconds" maxlength="2" max="60" pattern="[0-9]*" />
+                <ul class="modal-inner-time-group-menu">
+                  <li value="01">1 giây</li>
+                  <li value="02">2 giây</li>
+                  <li value="03">3 giây</li>
+                  <li value="04">4 giây</li>
+                  <li value="05">5 giây</li>
+                  <li value="06">6 giây</li>
+                  <li value="07">7 giây</li>
+                  <li value="08">8 giây</li>
+                  <li value="09">9 giây</li>
+                  <li value="10">10 giây</li>
+                  <li value="11">11 giây</li>
+                  <li value="12">12 giây</li>
+                  <li value="13">13 giây</li>
+                  <li value="14">14 giây</li>
+                  <li value="15">15 giây</li>
+                  <li value="16">16 giây</li>
+                  <li value="17">17 giây</li>
+                  <li value="18">18 giây</li>
+                  <li value="19">19 giây</li>
+                  <li value="20">20 giây</li>
+                  <li value="21">21 giây</li>
+                  <li value="22">22 giây</li>
+                  <li value="23">23 giây</li>
+                  <li value="24">24 giây</li>
+                  <li value="25">25 giây</li>
+                  <li value="26">26 giây</li>
+                  <li value="27">27 giây</li>
+                  <li value="28">28 giây</li>
+                  <li value="29">29 giây</li>
+                  <li value="30">30 giây</li>
+                  <li value="31">31 giây</li>
+                  <li value="32">32 giây</li>
+                  <li value="33">33 giây</li>
+                  <li value="34">34 giây</li>
+                  <li value="35">35 giây</li>
+                  <li value="36">36 giây</li>
+                  <li value="37">37 giây</li>
+                  <li value="38">38 giây</li>
+                  <li value="39">39 giây</li>
+                  <li value="40">40 giây</li>
+                  <li value="41">41 giây</li>
+                  <li value="42">42 giây</li>
+                  <li value="43">43 giây</li>
+                  <li value="44">44 giây</li>
+                  <li value="45">45 giây</li>
+                  <li value="46">46 giây</li>
+                  <li value="47">47 giây</li>
+                  <li value="48">48 giây</li>
+                  <li value="49">49 giây</li>
+                  <li value="50">50 giây</li>
+                  <li value="51">51 giây</li>
+                  <li value="52">52 giây</li>
+                  <li value="53">53 giây</li>
+                  <li value="54">54 giây</li>
+                  <li value="55">55 giây</li>
+                  <li value="56">56 giây</li>
+                  <li value="57">57 giây</li>
+                  <li value="58">58 giây</li>
+                  <li value="59">59 giây</li>
+                  <li value="60">60 giây</li>
+                </ul>
+                <label for="seconds">Giây</label>
+              </div>
+            </div>
+            <button class="modal-inner-btn-set">Đặt</button>
+          </div>
+        </div>
+        <button class="button-add"><i class="fa-solid fa-plus"></i></button>
+        <div class="history">
+          <div class="alarm">
+            <time>01 : 50</time>
+            <button class="button-slide">
+              <div class="button-slide-circle"></div>
+              <div class="button-slide-bg"></div>
+            </button>
+          </div>
+          <div class="alarm">
+            <time>01 : 50</time>
+            <button class="button-slide">
+              <div class="button-slide-circle"></div>
+              <div class="button-slide-bg"></div>
+            </button>
+          </div>
+        </div>
+        <audio id="audio" loop>
+          <source
+            src="./audio/day-di-le-duong-bao-lam-sieu-hai-nhacchuongviet.com.mp3"
+            type="audio/mpeg"
+          />
+        </audio>
+        <select class="list-audios">
+          <option
+            value="./audio/day-di-le-duong-bao-lam-sieu-hai-nhacchuongviet.com.mp3"
+          >
+            Lê Dương Bảo Lâm
+          </option>
+          <option value="./audio/bao-thuc-quan-doi-nhacchuongviet.com.mp3">
+            Báo thức quân đội
+          </option>
+          <option
+            value="./audio/day-di-ong-chau-oi-remix-nhacchuongviet.com.mp3"
+          >
+            Dậy đi ô cháu ơi
+          </option>
+          <option
+            value="./audio/day-may-dume-gio-nay-con-ngu-nhacchuongviet.com.mp3"
+          >
+            Dậy mày giờ còn ngủ
+          </option>
+        </select>
+      </div>
+
+      <div class="time-now"></div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

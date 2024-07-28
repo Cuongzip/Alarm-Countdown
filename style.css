@@ -20,9 +20,8 @@ ul{
 }
 .wrapper{
     background-color: #1c2743;
-    height: 100vh;
-
-
+    padding: 30px 0;
+    min-height: 100vh;
 }
 
 .inner{
@@ -32,21 +31,17 @@ ul{
 .count-down {
     position: relative;
 }
-.count-down{
-  
-    text-align: center;
-
-}
 .count-down time{
     font-size: 19vw;
+    line-height: 19vw;
     font-weight: 800;
-    line-height: 250px;
 }
 
 .count-down-buttons{
     display:flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 50px;
 }
 
 .count-down-button{

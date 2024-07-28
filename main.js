@@ -12,7 +12,7 @@ const app = {
     const startBtnElement = $(".count-down-start");
     const stopBtnElement = $(".count-down-stop");
     const resetBtnElement = $(".count-down-reset");
-    const starAgainBtnElement = $(".count-down-start-again");
+    const startAgainBtnElement = $(".count-down-start-again");
 
     const listInputElements = modalInnerElement.querySelectorAll("input");
 
@@ -120,7 +120,7 @@ const app = {
         } else {
           clearInterval(countDownIntervalId);
           stopBtnElement.classList.remove("show");
-          starAgainBtnElement.classList.add("show");
+          startAgainBtnElement.classList.add("show");
           audioElement.currentTime = 0;
           audioElement.play();
           bellElement.classList.add("animation-shaking");
@@ -145,12 +145,13 @@ const app = {
       resetBtnElement.classList.remove("show");
     };
 
-    starAgainBtnElement.onclick = () => {
+    startAgainBtnElement.onclick = () => {
       stopBtnElement.classList.add("show");
-      starAgainBtnElement.classList.remove("show");
+      startAgainBtnElement.classList.remove("show");
       timeCountDown = { ...timeCountDownOrigin };
       countDownTimeElement.innerText = this.handleTime(timeCountDown);
       audioElement.pause();
+      bellElement.classList.remove("animation-shaking");
       startBtnElement.dispatchEvent(new Event("click"));
     };
 

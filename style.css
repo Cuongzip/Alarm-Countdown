@@ -38,8 +38,8 @@ ul{
     align-items: center;
 }
 .count-down time{
-    font-size: 19vw;
-    line-height: 19vw;
+    font-size: 16vw;
+    line-height: 16vw;
     font-weight: 800;
     cursor: pointer;
 }
@@ -55,14 +55,15 @@ ul{
 .count-down-button{
     display: none;
     background-color: #fd9564;
+    font-size: 2rem;
     padding: 5px 20px;
-    border-radius: 15px;
+    border-radius: 20px;
     color: white;
     border: 1px solid white;
     margin: 10px;
 }
 .count-down-description{
-    margin-top: 30px;
+    margin-top: 50px;
     font-size: 2rem;
     color: #e3463f;
 }
@@ -70,11 +71,11 @@ ul{
     background-color: white;
     color: black;
     font-size: 3rem;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     position: fixed;
-    bottom: 50px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -108,6 +109,7 @@ ul{
     width: 70px;
     height: 25px;
     background-color: white;
+    border: 1px solid white;
     overflow: hidden;
     cursor: pointer;
 }
@@ -158,12 +160,13 @@ ul{
     transform: translate(-50%,-50%);
     background-color: white;
     border-radius: 10px;
-    padding: 30px 20px;
+    padding: 5px 20px 30px 20px;
+    box-shadow: 0 0 8px rgba(0, 0,0,0.9);
 }
 .modal-inner-time{
     display: flex;
     align-items: center;
-    font-size: 19vw;
+    font-size: 15vw;
     color: black;
 }
 .modal-inner-time-group{
@@ -174,13 +177,14 @@ ul{
 }
 .modal-inner-time-group input{
     border: none;
-    width: 2.3ch;
+    width: 2.5ch;
     font-weight: 800;
     text-align: center;
-    padding: 10px;
     border-radius: 10px;
     overflow: hidden;
+    padding-top: 25px;
 }
+
 .modal-inner-time-group-menu{
     font-size: 1.6rem;
     position: absolute;
@@ -222,10 +226,10 @@ ul{
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #fd9564;
-    border: 1px solid #e3463f;
+    border: 1px solid white;
     color: white;
     font-size: 2rem;
-    padding: 8px 30px;
+    padding: 5px 30px;
     border-radius: 20px;
 }
 .show{
@@ -233,8 +237,9 @@ ul{
 }
 .time-now{
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
 }
 
 .list-audios{
@@ -242,12 +247,14 @@ ul{
     bottom: 20px;
     right: 20px;
 }
+.wrap-bell{
+    text-align: center;
+    padding: 30px 0;
+
+}
 .bell{
-    display: block;
     color: #fd9564;
     font-size: 10rem;
-    padding: 50px 0;
-    text-align: center;
     cursor: pointer;
 }
 

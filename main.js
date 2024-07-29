@@ -88,6 +88,13 @@ const app = {
       };
 
       totalSeconds = this.convertTimeToTotalSeconds(timeCountdown);
+
+      if (totalSeconds <= 0) {
+        startBtnElement.disabled = true;
+      } else {
+        startBtnElement.disabled = false;
+      }
+
       let timeText = this.handleFormatTime(timeCountdown);
 
       for (let inputElement of listInputElements) {
@@ -248,6 +255,7 @@ const app = {
       for (let inputElement of listInputElements) {
         time[inputElement.id] = Number(inputElement.value);
       }
+      console.log("a");
       handleStopAudio();
       switch (action) {
         case "set-count-down":
@@ -255,10 +263,12 @@ const app = {
           totalSeconds = this.convertTimeToTotalSeconds(timeCountdown);
           countDownTimeElement.innerText =
             this.convertTimeToText(timeCountdown);
+          clearInterval(countDownIntervalId);
           stopBtnElement.classList.remove("show");
           startBtnElement.classList.add("show");
           resetBtnElement.classList.remove("show");
           startAgainBtnElement.classList.remove("show");
+
           if (totalSeconds <= 0) {
             startBtnElement.disabled = true;
           } else {

@@ -15,6 +15,9 @@ body{
     font-size: 1.6rem;
     color: white;
 }
+button{
+    cursor: pointer;
+}
 ul{
     list-style: none;
 }
@@ -30,14 +33,19 @@ ul{
 }
 .count-down {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .count-down time{
     font-size: 19vw;
     line-height: 19vw;
     font-weight: 800;
+    cursor: pointer;
 }
 
 .count-down-buttons{
+    align-self: flex-start;
     display:flex;
     flex-direction: column;
     align-items: flex-start;
@@ -52,9 +60,13 @@ ul{
     color: white;
     border: 1px solid white;
     margin: 10px;
-
 }
-.button-add{
+.count-down-description{
+    margin-top: 30px;
+    font-size: 2rem;
+    color: #e3463f;
+}
+.button-add-alarm{
     background-color: white;
     color: black;
     font-size: 3rem;
@@ -70,13 +82,25 @@ ul{
     align-items: center;
     border: 1px solid #fd9564;
 }
-.history{
-    padding: 30px;
+.list-alarm{
+    padding: 50px 0;
 }
 .alarm{
     font-size: 3rem;
     display: flex;
     justify-content: space-between;
+    padding: 20px 0;
+    cursor: pointer;
+}
+.alarm-left{
+    display: flex;
+    flex-direction: column;
+}
+.alarm-left-rest-duration{
+    margin-top: 15px;
+    font-size: 1.9rem;
+    color: rgb(146, 152, 161);
+    height: 26px;
 }
 .button-slide{
     position: relative;
@@ -85,6 +109,7 @@ ul{
     height: 25px;
     background-color: white;
     overflow: hidden;
+    cursor: pointer;
 }
 .button-slide-circle{
     position: absolute;
@@ -114,9 +139,7 @@ ul{
 .button-slide-active .button-slide-bg {
    margin-left:0;
 }
-.alarm ~ .alarm{
-    margin-top: 30px;
-}
+
 /* modal */
 .modal{
     display: none;
@@ -151,7 +174,7 @@ ul{
 }
 .modal-inner-time-group input{
     border: none;
-    width: 2.2ch;
+    width: 2.3ch;
     font-weight: 800;
     text-align: center;
     padding: 10px;

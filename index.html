@@ -27,8 +27,11 @@
 
         <div class="count-down">
           <time>00:00:00</time>
+          <span class="count-down-description" contenteditable="true"
+            >Nhập mô tả ở đây</span
+          >
           <div class="count-down-buttons">
-            <button class="count-down-start count-down-button show">
+            <button class="count-down-start count-down-button show" disabled>
               Start
             </button>
             <button class="count-down-stop count-down-button">Stop</button>
@@ -42,8 +45,9 @@
           <div class="modal-inner">
             <div class="modal-inner-time">
               <div class="modal-inner-time-group">
-                <input id="hours" maxlength="2" max="60" />
+                <input id="hours" maxlength="2" />
                 <ul class="modal-inner-time-group-menu">
+                  <li value="00">0 giờ</li>
                   <li value="01">1 giờ</li>
                   <li value="02">2 giờ</li>
                   <li value="03">3 giờ</li>
@@ -72,8 +76,9 @@
               </div>
               :
               <div class="modal-inner-time-group">
-                <input id="minutes" maxlength="2" max="60" />
+                <input id="minutes" maxlength="2" />
                 <ul class="modal-inner-time-group-menu">
+                  <li value="00">0 phút</li>
                   <li value="01">1 phút</li>
                   <li value="02">2 phút</li>
                   <li value="03">3 phút</li>
@@ -139,9 +144,9 @@
               </div>
               :
               <div class="modal-inner-time-group">
-                <input id="seconds" maxlength="2" max="60" pattern="[0-9]*" />
+                <input id="seconds" maxlength="2" />
                 <ul class="modal-inner-time-group-menu">
-                  <li value="01">1 giây</li>
+                  <li value="00">0 giây</li>
                   <li value="02">2 giây</li>
                   <li value="03">3 giây</li>
                   <li value="04">4 giây</li>
@@ -208,9 +213,11 @@
             <button class="modal-inner-btn-set">Đặt</button>
           </div>
         </div>
-        <button class="button-add"><i class="fa-solid fa-plus"></i></button>
-        <div class="history">
-          <div class="alarm">
+        <button class="button-add-alarm">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <div class="list-alarm">
+          <!-- <div class="alarm">
             <time>01 : 50</time>
             <button class="button-slide">
               <div class="button-slide-circle"></div>
@@ -223,7 +230,7 @@
               <div class="button-slide-circle"></div>
               <div class="button-slide-bg"></div>
             </button>
-          </div>
+          </div> -->
         </div>
         <audio id="audio" loop>
           <source

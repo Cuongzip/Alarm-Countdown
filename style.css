@@ -23,7 +23,7 @@ ul{
 }
 .wrapper{
     background-color: #1c2743;
-    padding: 30px 0;
+    padding: 60px 0;
     min-height: 100vh;
 }
 
@@ -75,7 +75,7 @@ ul{
     height: 60px;
     border-radius: 50%;
     position: fixed;
-    bottom: 30px;
+    bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -246,10 +246,16 @@ ul{
     position: fixed;
     bottom: 20px;
     right: 20px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+.list-audios:focus{
+    box-shadow: 0 0 8px #e3463f;
+    outline: none;
 }
 .wrap-bell{
     text-align: center;
-    padding: 30px 0;
+    padding-bottom: 30px;
 
 }
 .bell{

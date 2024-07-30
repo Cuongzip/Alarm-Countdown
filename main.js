@@ -171,10 +171,12 @@ const app = {
               restDuration += 24 * 60 * 60;
             }
             const time = this.convertTotalSecondsToTime(restDuration);
-
-            restDurationElements[
-              index
-            ].innerText = `Báo thức sao ${time.hours} giờ ${time.minutes} phút`;
+            let timeText = "Báo thức sau";
+            if (time.hours) timeText += ` ${time.hours} giờ`;
+            if (time.minutes) timeText += ` ${time.minutes} phút`;
+            if (time.seconds && !time.hours && !time.minutes)
+              timeText += ` ${time.seconds} giây`;
+            restDurationElements[index].innerText = timeText;
 
             if (totalSecondsAlarm === totalSecondSTimeNow) {
               isFireAlarm = true;
@@ -211,7 +213,7 @@ const app = {
     startBtnElement.onclick = () => {
       handleStopAudio();
       countDownIntervalId = setInterval(() => {
-        if (--totalSeconds <= 0) {
+        if (--totalSeconds < 0) {
           clearInterval(countDownIntervalId);
           stopBtnElement.classList.remove("show");
           startAgainBtnElement.classList.add("show");
